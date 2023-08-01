@@ -1,20 +1,4 @@
-function LightControl (cL: number, wL: number, yL: number) {
-    pins.digitalWritePin(DigitalPin.P1, yL)
-    if (cL == 1 && wL == 1) {
-        Tinybit.CarCtrlSpeed2(Tinybit.CarState.Car_Run, 2, 2)
-    } else if (cL == 2 && wL == 2) {
-        Tinybit.CarCtrlSpeed2(Tinybit.CarState.Car_Back, 2, 2)
-    } else if (cL == 1 && wL == 2) {
-        Tinybit.CarCtrlSpeed2(Tinybit.CarState.Car_SpinLeft, 2, 2)
-    } else if (cL == 2 && wL == 1) {
-        Tinybit.CarCtrlSpeed2(Tinybit.CarState.Car_SpinRight, 2, 2)
-    } else if (cL == 1 && wL == 0) {
-        Tinybit.CarCtrlSpeed2(Tinybit.CarState.Car_Left, 2, 2)
-    } else if (cL == 0 && wL == 1) {
-        Tinybit.CarCtrlSpeed2(Tinybit.CarState.Car_Right, 2, 2)
-    }
-}
-function car_green () {
+function TESTING () {
     Tinybit.CarCtrlSpeed2(Tinybit.CarState.Car_Run, 2, 2)
     basic.showLeds(`
         # . . . .
@@ -69,6 +53,22 @@ function car_green () {
         . . . . .
         `)
     basic.pause(60000)
+}
+function LightControl (cL: number, wL: number, yL: number) {
+    pins.digitalWritePin(DigitalPin.P1, yL)
+    if (cL == 1 && wL == 1) {
+        Tinybit.CarCtrlSpeed2(Tinybit.CarState.Car_Run, 2, 2)
+    } else if (cL == 2 && wL == 2) {
+        Tinybit.CarCtrlSpeed2(Tinybit.CarState.Car_Back, 2, 2)
+    } else if (cL == 1 && wL == 2) {
+        Tinybit.CarCtrlSpeed2(Tinybit.CarState.Car_SpinLeft, 2, 2)
+    } else if (cL == 2 && wL == 1) {
+        Tinybit.CarCtrlSpeed2(Tinybit.CarState.Car_SpinRight, 2, 2)
+    } else if (cL == 1 && wL == 0) {
+        Tinybit.CarCtrlSpeed2(Tinybit.CarState.Car_Left, 2, 2)
+    } else if (cL == 0 && wL == 1) {
+        Tinybit.CarCtrlSpeed2(Tinybit.CarState.Car_Right, 2, 2)
+    }
 }
 basic.forever(function () {
     basic.showLeds(`
