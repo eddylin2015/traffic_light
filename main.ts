@@ -1,57 +1,21 @@
 function TESTING () {
     Tinybit.CarCtrlSpeed2(Tinybit.CarState.Car_Run, 2, 2)
-    basic.showLeds(`
-        # . . . .
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
-        `)
+    basic.showString("1")
     basic.pause(60000)
     Tinybit.CarCtrlSpeed2(Tinybit.CarState.Car_Back, 2, 2)
-    basic.showLeds(`
-        # # . . .
-        # . . . .
-        . # . . .
-        . . . . .
-        . . . . .
-        `)
+    basic.showString("2")
     basic.pause(60000)
     Tinybit.CarCtrlSpeed2(Tinybit.CarState.Car_SpinLeft, 2, 2)
-    basic.showLeds(`
-        # # # . .
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
-        `)
+    basic.showString("3")
     basic.pause(60000)
     Tinybit.CarCtrlSpeed2(Tinybit.CarState.Car_SpinRight, 2, 2)
-    basic.showLeds(`
-        # # # # .
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
-        `)
+    basic.showString("4")
     basic.pause(60000)
     Tinybit.CarCtrlSpeed2(Tinybit.CarState.Car_Left, 2, 2)
-    basic.showLeds(`
-        # # # # #
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
-        `)
+    basic.showString("5")
     basic.pause(60000)
     Tinybit.CarCtrlSpeed2(Tinybit.CarState.Car_Right, 2, 2)
-    basic.showLeds(`
-        # # # # #
-        # . . . .
-        . . . . .
-        . . . . .
-        . . . . .
-        `)
+    basic.showString("6")
     basic.pause(60000)
 }
 function LightControl (cL: number, wL: number, yL: number) {
